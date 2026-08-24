@@ -283,9 +283,7 @@ Answer:
             model="gemini-3.7-flash",
             contents=prompt,
             config=types.GenerateContentConfig(
-                temperature=0.1,
                 max_output_tokens=500,
-                candidate_count=1,
             ),
         )
         answer = (response.text or "").strip()
