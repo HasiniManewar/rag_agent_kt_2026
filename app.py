@@ -235,10 +235,10 @@ def retrieve_chunks(question, top_k=4):
 # KT context and to refuse unsupported claims.
 # ---------------------------------------------------------------------------
 def generate_answer(question, retrieved):
-    api_key = os.getenv("GOOGLE_API_KEY", "").strip()
+    api_key = os.getenv("GEMINI_API_KEY", "").strip()
 
     if not api_key:
-        return "The AI service is not configured. Please set the GOOGLE_API_KEY environment variable."
+        return "The AI service is not configured. Please set the GEMINI_API_KEY environment variable."
 
     if not retrieved:
         return NOT_AVAILABLE_MESSAGE
